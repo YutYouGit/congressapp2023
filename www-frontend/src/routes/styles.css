@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap%27');
+
 * {
-    transition: 300ms;
+    --bg-0: #0F1216;
+    --bg-1: #1A1C1E;
+
+    --fg-0: #EEEEFF;
+    --fg-1: #FFFFFF;
+
+    --primary-0: #44AAFF;
+    --primary-1: #55BBFF;
+
+    --secondary-0: #44FFAA;
+    --secondary-1: #55FFBB;
+
+    font-family: "Ubuntu";
+    transition: all 300ms;
 }
 
 body {
-    background-color: black;
-    color: white;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-1);
+    color: var(--fg-1);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: color-mix(in srgb, var(--fg-0) 20%, var(--bg-0));
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--bg-0) 20%, var(--fg-0));
+    border-radius: 5px;
 }
