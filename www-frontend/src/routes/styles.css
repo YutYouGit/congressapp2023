@@ -1,3 +1,7 @@
+* {
+    transition: 300ms;
+}
+
 body {
     background-color: black;
     color: white;
