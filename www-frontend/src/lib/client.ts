@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // This is required for process.versions.electron below
 /// <reference types="electron" />
 
