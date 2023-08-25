@@ -1,5 +1,5 @@
 <div>
-  <a id="logo" href="/"><button>Home</button></a>
+  <div id="logo"><a href="/"><button>Home</button></a></div>
   <a href="/map"><button>Interactive Map</button></a>
   <a href="/about"><button>About</button></a>
 </div>
@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-color: color-mix(in srgb, var(--fg-1) 10%, var(--bg-0));
+    background-color: color-mix(in srgb, var(--fg-1) 7%, var(--bg-0));
     display: flex;
     max-width: 100vw;
     box-shadow: 0 0 20px 2rem
@@ -20,8 +20,8 @@
     color: var(--bg-0);
     border: none;
     background-color: color-mix(in srgb, var(--secondary-0) 75%, var(--bg-0));
-    padding: 20px;
-    margin-left: 20px;
+    padding: 15px 20px 15px 20px;
+    margin-left: clamp(5px, 1vw, 20px);
   }
 
   a button:hover {
@@ -33,7 +33,7 @@
   }
 
   #logo button {
-      margin: 0;
+    margin: 0;
     background-color: color-mix(in srgb, var(--primary-0) 75%, var(--bg-0));
   }
 
