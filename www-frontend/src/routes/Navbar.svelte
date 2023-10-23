@@ -1,6 +1,7 @@
 <div>
   <div id="logo"><a href="/"><button>Home</button></a></div>
   <a href="/map"><button>Interactive Map</button></a>
+  <a href="/offices"><button>What Does Each Office Do?</button></a>
   <a href="/about"><button>About</button></a>
 </div>
 
