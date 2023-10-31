@@ -7,9 +7,9 @@
 </h1>
 
 <h1>
-  parnava is the <span style="color: brown;">Researcher</span>
+  Arshdeep is the <span style="color: brown;">3D Modeler</span>
 </h1>
 
 <h1>
-  Ailesh is the <span style="color: orange;">Programmer/Helper</span>
+  Ailesh is the <span style="color: orange;">Researcher</span>
 </h1>

@@ -2,28 +2,33 @@
   import { onMount } from "svelte";
   import createMap from "$lib/interactive_map";
 
-  let el: HTMLCanvasElement;
-  let location: HTMLSpanElement;
-  let hoveringLocation: HTMLSpanElement;
-  let funFacts: HTMLOListElement;
-  let contactInfo: HTMLOListElement;
+  let el: HTMLCanvasElement,
+    location: HTMLSpanElement,
+    hoveringLocation: HTMLSpanElement,
+    funFacts: HTMLUListElement,
+    contactInfo: HTMLUListElement,
+    searchBar: HTMLInputElement;
 
-  onMount(() => {
-    createMap(el, location, hoveringLocation, funFacts, contactInfo);
-  });
+  onMount(() =>
+    createMap(el, location, hoveringLocation, funFacts, contactInfo, searchBar)
+  );
 </script>
 
-<p class="location">Location: <span id="location" bind:this={location} /></p>
+<input bind:this={searchBar} type="text" placeholder="Goto City" />
+
+<p class="location">Selected: <span id="location" bind:this={location} /></p>
 <p class="location">
   Hovering: <span id="location" bind:this={hoveringLocation} />
 </p>
 
 <div class="box-left">
-  <ol class="fun-facts" bind:this={funFacts} />
+  <b>Fun Facts</b>
+  <ul class="fun-facts" bind:this={funFacts} />
 </div>
 
 <div class="box-right">
-  <ol class="contact-info" bind:this={contactInfo} />
+  <b>Contact Info</b>
+  <ul class="contact-info" bind:this={contactInfo} />
 </div>
 
 <canvas bind:this={el}>
@@ -51,6 +56,7 @@
     left: 0%;
     background-color: var(--bg-0);
     display: flex;
+    flex-direction: column;
     position: absolute;
     max-width: 25vw;
     max-height: 80vh;
@@ -65,6 +71,7 @@
     right: 0%;
     background-color: var(--bg-0);
     display: flex;
+    flex-direction: column;
     position: absolute;
     max-width: 25vw;
     max-height: 80vh;
@@ -74,7 +81,31 @@
     transform: translateY(-50%);
   }
 
-  ol {
+  ul {
     font-size: clamp(0.4rem, 1vw, 1.6rem);
+    list-style-position: inside;
+    text-indent: 0;
+    padding: 0;
+    margin: 0;
+    list-style: ">";
+  }
+
+  input {
+    color: var(--tertiary-0);
+    background-color: var(--bg-1);
+    border: var(--tertiary-1) solid 6px;
+    padding: 6px;
+    font-size: clamp(0.8rem, 2vw, 2.3rem);
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    box-shadow: 0px 0px 25px 1rem
+      color-mix(in srgb, var(--bg-0) 25%, rgba(0, 0, 0, 0));
+  }
+
+  input:focus {
+    outline: none;
   }
 </style>

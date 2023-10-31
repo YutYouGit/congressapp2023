@@ -13,6 +13,9 @@
     --secondary-0: #44FFAA;
     --secondary-1: #6becc3;
 
+    --tertiary-0: #42B2C3;
+    --tertiary-1: #44DDEE;
+
     font-family: "Ubuntu";
     transition: all 300ms;
 }

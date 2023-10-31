@@ -20,23 +20,7 @@ type LocationData = [
 ];
 const modelMap = new Map<string, LocationData>();
 
-//njh
-modelMap.set("New Jersey", [
-    "/models/nj.glb",
-    ["fun facts"],
-    ["contact info"],
-    "",
-    "",
-]);
-
-//njcounties
-modelMap.set("Middlesex County", ["/models/couhnties/middlesex.glb"]);
-modelMap.set("Monmouth County", ["/models/counties/middlesex.glb"]);
-
-//njmiddlesextowns
-//models/cities/Middlesex/highland park.glb
-modelMap.set("Carteret", [
-    "/models/cities/Middlesex/carteret.glb",
+modelMap.set("Carteret", ["/models/cities/middlesex/carteret.glb",
     [
         "Fun Facts!"
     ],
@@ -67,7 +51,7 @@ modelMap.set("Carteret", [
     "",
     ""
 ]);
-modelMap.set("Edison Township", ["/models/cities/Middlesex/edison.glb",
+modelMap.set("Edison Township", ["/models/cities/middlesex/edison.glb",
     [
         "",
     ],
@@ -91,7 +75,7 @@ modelMap.set("Edison Township", ["/models/cities/Middlesex/edison.glb",
     "",
     ""
 ])
-modelMap.set("Highland Park", ["/models/cities/Middlesex/highland park.gub",
+modelMap.set("Highland Park", ["/models/cities/middlesex/highland park.glb",
     [
         "",
     ],
@@ -110,7 +94,7 @@ modelMap.set("Highland Park", ["/models/cities/Middlesex/highland park.gub",
     "",
     ""
 ]);
-modelMap.set("Metuchen", ["/models/cities/Middlesex/metuchen.glb",
+modelMap.set("Metuchen", ["/models/cities/middlesex/metuchen.glb",
     [
         ""
     ],
@@ -146,73 +130,53 @@ modelMap.set("Metuchen", ["/models/cities/Middlesex/metuchen.glb",
     "",
     ""
 ]);
-modelMap.set("New Brunswick", ["/models/cities/Middlesex/new brunswick.glb"]);
-modelMap.set("Old Bridge Township", ["/models/cities/Middlesex/old bridge.glb"]);
-modelMap.set("Perth Amboy", ["/models/cities/Middlesex/perth amboy.glb"]);
-modelMap.set("Piscataway Township", ["/models/cities/Middlesex/piscataway.glb"]);
-modelMap.set("Sayreville", ["/models/cities/Middlesex/sayreville.glb"]);
-modelMap.set("South Amboy", ["/models/cities/Middlesex/south amboy.glb"]);
-modelMap.set("South Plainfield", ["/models/cities/Middlesex/south plainfield.glb"]);
-modelMap.set("Woodbridge Township", ["/models/cities/Middlesex/woodbridge.glb"]);
+modelMap.set("New Brunswick", ["/models/cities/middlesex/new brunswick.glb"]);
+modelMap.set("Old Bridge Township", ["/models/cities/middlesex/old bridge.glb"]);
+modelMap.set("Perth Amboy", ["/models/cities/middlesex/perth_amboy.glb"]);
+modelMap.set("Piscataway Township", ["/models/cities/middlesex/piscataway.glb"]);
+modelMap.set("Sayreville", ["/models/cities/middlesex/sayreville.glb"]);
+modelMap.set("South Amboy", ["/models/cities/middlesex/south_amboy.glb"]);
+modelMap.set("South Plainfield", ["/models/cities/middlesex/south plainfield.glb"]);
+modelMap.set("Woodbridge Township", ["/models/cities/middlesex/woodbridge.glb"]);
+modelMap.set("Aberdeen Township", ["/models/cities/monmouth/aberdeen.glb"]);
+modelMap.set("Allenhurst", ["/models/cities/monmouth/allenhurst.glb"]);
+modelMap.set("Asbury Park", ["/models/cities/monmouth/asbury park.glb"]);
+modelMap.set("Atlantic Highlands", ["/models/cities/monmouth/atlantic highlands.glb"]);
+modelMap.set("Bradley Beach", ["/models/cities/monmouth/bradley beach.glb"]);
+modelMap.set("Deal", ["/models/cities/monmouth/deal.glb"]);
+modelMap.set("Fair Haven", ["/models/cities/monmouth/fair haven.glb"]);
+modelMap.set("Hazlet Township", ["/models/cities/monmouth/hazlet.glb"]);
+modelMap.set("Highlands", ["/models/cities/monmouth/highlands.glb"]);
+modelMap.set("Interlaken", ["/models/cities/monmouth/interlaken.glb"]);
+modelMap.set("Keansburg", ["/models/cities/monmouth/keansburg.glb"]);
+modelMap.set("Keyport", ["/models/cities/monmouth/keyport.glb"]);
+modelMap.set("Little Silver", ["/models/cities/monmouth/little silver.glb"]);
+modelMap.set("Loch Arbour", ["/models/cities/monmouth/loch arbour.glb"]);
+modelMap.set("Long Branch", ["/models/cities/monmouth/long branch.glb"]);
+modelMap.set("Matawan", ["/models/cities/monmouth/matawan.glb"]);
+modelMap.set("Middletown Township", ["/models/cities/monmouth/middletown.glb"]);
+modelMap.set("Monmouth Beach", ["/models/cities/monmouth/monmouth beach.glb"]);
+modelMap.set("Neptune City", ["/models/cities/monmouth/neptune.glb"]);
+modelMap.set("Neptune Township", ["/models/cities/monmouth/neptune twp.glb"]);
+modelMap.set("Oceanport", ["/models/cities/monmouth/ocean port.glb"]);
+modelMap.set("Rumson", ["/models/cities/monmouth/rumson.glb"]);
+modelMap.set("Sea Bright", ["/models/cities/monmouth/sea bright.glb"]);
+modelMap.set("Union Beach", ["/models/cities/monmouth/union beach.glb"]);
+modelMap.set("West Long Branch", ["/models/cities/monmouth/west long branch.glb"]);
+modelMap.set("Shrewsbury", ["/models/cities/monmouth/shrewsbury.glb"]);
 
-//njmonmouthtowns
-modelMap.set("Aberdeen Township", ["/models/cities/Monmouth/aberdeen.glb"]);
-modelMap.set("Allenhurst", ["/models/cities/Monmouth/allenhurst.glb"]);
-modelMap.set("Asbury Park", ["/models/cities/Monmouth/asbury park.glb"]);
-modelMap.set("Atlantic Highlands", ["/models/cities/Monmouth/atlantic highlands.glb"]);
-modelMap.set("Bradley Beach", ["/models/cities/Monmouth/bradley beach.glb"]);
-modelMap.set("Deal", ["/models/cities/Monmouth/deal.glb"]);
-modelMap.set("Fair Haven", ["/models/cities/Monmouth/fair haven.glb"]);
-modelMap.set("Hazlet Township", ["/models/cities/Monmouth/hazlet.glb"]);
-modelMap.set("Highlands", ["/models/cities/Monmouth/highlands.glb"]);
-modelMap.set("Interlaken", ["/models/cities/Monmouth/interlaken.glb"]);
-modelMap.set("Keansburg", ["/models/cities/Monmouth/keansburg.glb"]);
-modelMap.set("Keyport", ["/models/cities/Monmouth/keyport.glb"]);
-modelMap.set("Little Silver", ["/models/cities/Monmouth/little silver.glb"]);
-modelMap.set("Loch Arbour", ["/models/cities/Monmouth/loch arbour.glb"]);
-modelMap.set("Long Branch", ["/models/cities/Monmouth/long branch.glb"]);
-modelMap.set("Matawan", ["/models/cities/Monmouth/matawan.glb"]);
-modelMap.set("Middletown Township", ["/models/cities/Monmouth/middletown.glb"]);
-modelMap.set("Monmouth Beach", ["/models/cities/Monmouth/monmouth beach.glb"]);
-modelMap.set("Neptune City", ["/models/cities/Monmouth/neptune.glb"]);
-modelMap.set("Neptune Township", ["/models/cities/Monmouth/neptune twp.glb"]);
-modelMap.set("Oceanport", ["/models/cities/Monmouth/ocean port.glb"]);
-modelMap.set("Rumson", ["/models/cities/Monmouth/rumson.glb"]);
-modelMap.set("Sea Bright", ["/models/cities/Monmouth/sea bright.glb"]);
-modelMap.set("Union Beach", ["/models/cities/Monmouth/union beach.glb"]);
-modelMap.set("West Long Branch", ["/models/cities/Monmouth/west long branch.glb"]);
-
-export const allCounties: string[] = [
-    "Middlesex County",
-    "Monmouth County",
-];
-
-export const extraRenderAllCounties: string[] = [
-    "/models/njalltowns/town_maps/nj.glb",
-];
-
-export const allMiddlesexTowns: string[] = [
+const selectedMaps: string[] = [
     "Carteret",
     "Edison Township",
     "Highland Park",
     "Metuchen",
     "New Brunswick",
-    "Old Bridge Township",
     "Perth Amboy",
     "Piscataway Township",
     "Sayreville",
     "South Amboy",
     "South Plainfield",
     "Woodbridge Township",
-    "Monmouth County"
-];
-
-export const extraRenderAllMiddlesexTowns: string[] = [
-    "/models/njmiddlesextowns/middlesex_county/middlesex_cities/middlesex_river.glb",
-    "/models/njalltowns/town_maps/nj.glb",
-];
-
-export const allMonmouthTowns: string[] = [
     "Aberdeen Township",
     "Allenhurst",
     "Asbury Park",
@@ -234,68 +198,22 @@ export const allMonmouthTowns: string[] = [
     "Neptune City",
     "Neptune Township",
     "Oceanport",
-    "Red Bank",
-    "Rumson",
-    "Sea Bright",
-    "Union Beach",
-    "West Long Branch",
-    "Middlesex County",
-    "New Jersey",
-];
-
-export const extraRenderAllMonmouthTowns: string[] = [
-    "/models/njmonmouthtowns/monmouth_county/monmouth/monmouth_river.glb",
-    "/models/njalltowns/town_maps/nj.glb",
-]
-
-const __allTowns: string[] = [
-    "Carteret",
-    "Edison Township",
-    "Highland Park",
-    "Metuchen",
-    "New Brunswick",
-    "Perth Amboy",
-    "Piscataway Township",
-    "Sayreville",
-    "South Amboy",
-    "South Plainfield",
-    "Woodbridge Township",
-    "Aberdeen Township",
-    "Allenhurst",
-    "Asbury Park",
-    "Alantic Highlands",
-    "Bradley Beach",
-    "Deal",
-    "Fair Haven",
-    "Hazlet Township",
-    "Highlands",
-    "Interlaken",
-    "Keansburg",
-    "Keyport",
-    "Little Silver",
-    "Loch Arbour",
-    "Long Branch",
-    "Matawan",
-    "Middletown Township",
-    "Monmouth Beach",
-    "Neptune City",
-    "Neptune Township",
-    "Oceanport",
     "Old Bridge Township",
     "Red Bank",
     "Rumson",
     "Sea Bright",
     "Union Beach",
     "West Long Branch",
+    "Shrewsbury"
 ];
 
-const __extraRenderAllTowns: string[] = [
+const extraRender: string[] = [
     "/models/rivers/Middlesex River.glb",
     "/models/rivers/Monmouth River.glb",
-    "/models/buildings/buildings.glb"
+    "/models/nj.glb",
 ];
 
-export default function createMap(el: HTMLCanvasElement, location: HTMLSpanElement, hoveringOverLocation: HTMLSpanElement, funFacts: HTMLOListElement, contactInfo: HTMLOListElement, selectedMaps = __allTowns, extraRender: string[] = __extraRenderAllTowns) {
+export default function createMap(el: HTMLCanvasElement, location: HTMLSpanElement, hoveringOverLocation: HTMLSpanElement, funFacts: HTMLUListElement, contactInfo: HTMLUListElement, searchBar: HTMLInputElement) {
     const renderer = new WebGLRenderer({ antialias: true, canvas: el });
     const width = 800;
     const height = 600;
@@ -343,9 +261,7 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
     const animate = () => {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
-    };
-
-    const resize = () => {
+    }, resize = () => {
         renderer.setSize(width, height);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
@@ -434,9 +350,13 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         }
         if (!selectedObject) return;
 
+        tpToObj(selectedObject);
+    });
+
+    function tpToObj(selectedObject: string) {
         const averagePosition = maps.get(selectedObject).scene.children[0].position;
         hasClicked = true;
-        controls.stop;
+        controls.enabled = false;
         controls.dispose();
         let i = 0;
         const interval = setInterval(() => {
@@ -475,5 +395,51 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
                 contactInfo.appendChild(li);
             }
         }, 10);
+    }
+
+    searchBar.addEventListener('keydown', e => {
+        const input = searchBar.value.toLowerCase();
+        const sortedMaps = selectedMaps
+            .map(m => [
+                m,
+                stringDistance(input, m.toLowerCase())
+            ] as [string, number])
+            .sort((a, b) => b[1] - a[1])
+            .filter(e => e[1] > 0)
+            .map(e => e[0]);
+
+        switch (e.key) {
+            case "Enter":
+                if (!sortedMaps[0]) return;
+                tpToObj(sortedMaps[0]);
+                searchBar.value = "";
+                break;
+        }
     });
+}
+
+function stringDistance(str1: string, str2: string): number {
+    let longestSubstring = "";
+
+    for (let i = 0; i < str1.length; i++) {
+        for (let j = 0; j < str2.length; j++) {
+            let substring = "";
+            let x = i;
+            let y = j;
+
+            while (x < str1.length &&
+                y < str2.length &&
+                str1[x] === str2[y]) {
+                substring += str1[x];
+                x++;
+                y++;
+            }
+
+            if (substring.length > longestSubstring.length) {
+                longestSubstring = substring;
+            }
+        }
+    }
+
+    return longestSubstring.length;
 }
