@@ -23,14 +23,14 @@
     [Hovering Over] <span id="location" bind:this={hoveringLocation}>___</span>
   </p>
   <br />
-  <b>Fun Facts</b>
+  <b style="color: var(--primary-0); font-size: 125%">Fun Facts</b>
   <ul class="fun-facts" bind:this={funFacts}>
     <li>Fun facts will appear here.</li>
   </ul>
 </div>
 
 <div class="box-right">
-  <b>Contact Info</b>
+  <b style="color: var(--primary-0); font-size: 125%;">Contact Info</b>
   <ul class="contact-info" bind:this={contactInfo}>
     <li>Contact infos will appear here.</li>
   </ul>
@@ -55,6 +55,7 @@
 
   .location {
     font-size: 150%;
+    color: var(--secondary-0);
   }
 
   #location {
@@ -69,7 +70,7 @@
     flex-direction: column;
     position: absolute;
     max-width: 25vw;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-x: hidden;
     overflow-y: scroll;
     top: 50%;
@@ -84,7 +85,7 @@
     flex-direction: column;
     position: absolute;
     max-width: 25vw;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-x: hidden;
     overflow-y: scroll;
     top: 50%;
