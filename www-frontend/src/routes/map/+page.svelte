@@ -14,11 +14,11 @@
   );
 </script>
 
-<input bind:this={searchBar} type="text" placeholder="Goto City" />
+<input bind:this={searchBar} type="text" placeholder="Go to Municipality" />
 
 <p class="location">Selected: <span id="location" bind:this={location} /></p>
 <p class="location">
-  Hovering: <span id="location" bind:this={hoveringLocation} />
+  Hovering Over: <span id="location" bind:this={hoveringLocation} />
 </p>
 
 <div class="box-left">
