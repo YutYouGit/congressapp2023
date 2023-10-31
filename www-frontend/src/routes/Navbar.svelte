@@ -1,14 +1,11 @@
 <div>
   <div id="logo">
-    <a href="/">
+    <a data-sveltekit-reload href="/">
       <button>
         <img src="/favicon.png" alt="Home" />
       </button>
     </a>
   </div>
-  <a href="/map"><button id="map">Interactive Map</button></a>
-  <a href="/offices"><button id="what">What Does Each Office Do?</button></a>
-  <a href="/about"><button id="about">About</button></a>
 </div>
 
 <style>

@@ -11,6 +11,9 @@ import {
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+
+
+
 type LocationData = [
     modelPath: string,
     funFacts: string[],
@@ -20,12 +23,17 @@ type LocationData = [
 ];
 const modelMap = new Map<string, LocationData>();
 
+
+
+
 modelMap.set("Carteret", ["/models/cities/middlesex/carteret.glb",
     [
-        "Fun Facts!"
+        "Population: 25,326",
+        "Area: 4.93mi²",
+        "Carteret is home to the Wildlife Conservation and Education Center, which houses a variety of exotic animals and provides educational programs.        ",
+        "Carteret was named after Lord Carteret and his son. They were important in the founding of New Jersey.        ",
     ],
     [
-        "Office Directory:",
         "Health & Recreation: 732-541-3890, HealthDept@carteret.net",
         "Building, Construction & Land Use: 732-541-3819, Building@carteret.net",
         "Engineering/Zoning: 732-541-3847, Zoning@carteret.net",
@@ -53,7 +61,13 @@ modelMap.set("Carteret", ["/models/cities/middlesex/carteret.glb",
 ]);
 modelMap.set("Edison Township", ["/models/cities/middlesex/edison.glb",
     [
-        "",
+        "Population: 107,588",
+        "Area: 30.69mi²",
+        "This was the town where Thomas Edison invented the lightbulb and where worked for many years.",
+        "The town is known for its large diverse and ethnic population, which is fastly growing.",
+        "The creators are from this town!",
+
+
     ],
     [
         "Animal Shelter: 732-248-7278, eas@edisonnj.org",
@@ -89,6 +103,9 @@ modelMap.set("Highland Park", ["/models/cities/middlesex/highland park.glb",
         "Tax Assessor | Highland Park, NJ: 732-572-340, tmancuso@hpboro.com",
         "Tax Collector | Highland Park, NJ: 732-819-3787, mramos@hpboro.com",
         "Water & Sewer | Highland Park, NJ: 732-819-3788, mramos@hpboro.com"
+
+
+
 
     ],
     "",
@@ -131,7 +148,29 @@ modelMap.set("Metuchen", ["/models/cities/middlesex/metuchen.glb",
     ""
 ]);
 modelMap.set("New Brunswick", ["/models/cities/middlesex/new brunswick.glb"]);
-modelMap.set("Old Bridge Township", ["/models/cities/middlesex/old bridge.glb"]);
+modelMap.set("Old Bridge Township", ["/models/cities/middlesex/old bridge.glb", [
+    "Population: 65,898",
+    "Area: 41 mi²  ",
+    "Old Bridge hosts the Old Bridge Raceway Park, a famous drag racing venue.    ",
+    "The town is home to Cheesequake State Park, known for its beautiful nature trails and a unique name inspired by Native American folklore.  ",
+],
+    [
+        "Administration: 732-745-5007",
+        "Clerk's Office: 732-745-5041",
+        "Engineering: 732-745-5056",
+        "Finance: 732-745-5045",
+        "Fire: 732-745-5254",
+        "Human and Community Services: 732-246-5353",
+        "Law: 732-745-5025",
+        "Mayor's Office: 732-745-5004",
+        "Planning, Community, and Economic Development: 732-745-5050",
+        "Police: 732-745-5200",
+        "Public Works: 732-745-5105",
+        "Social Services: 732-745-5100",
+        "Water Utility: 732-745-5062",
+    ],
+    "",
+    ""]);
 modelMap.set("Perth Amboy", ["/models/cities/middlesex/perth_amboy.glb"]);
 modelMap.set("Piscataway Township", ["/models/cities/middlesex/piscataway.glb"]);
 modelMap.set("Sayreville", ["/models/cities/middlesex/sayreville.glb"]);
@@ -148,11 +187,62 @@ modelMap.set("Fair Haven", ["/models/cities/monmouth/fair haven.glb"]);
 modelMap.set("Hazlet Township", ["/models/cities/monmouth/hazlet.glb"]);
 modelMap.set("Highlands", ["/models/cities/monmouth/highlands.glb"]);
 modelMap.set("Interlaken", ["/models/cities/monmouth/interlaken.glb"]);
-modelMap.set("Keansburg", ["/models/cities/monmouth/keansburg.glb"]);
+modelMap.set("Keansburg", ["/models/cities/monmouth/keansburg.glb",
+    [
+        "Population: 9,751",
+        "Area: 6.44 mi²",
+        " Keansburg is home to the Keansburg Amusement Park, a popular attraction for families and thrill-seekers.",
+        "The town features beautiful views of the New York City skyline from its waterfront areas.        ",
+    ],
+    [
+        "Code Enforcement and Construction Office: 732-787-0215 Ext. 228, Ed.Striedl@keansburg-nj.us",
+        "Registrar of Vital Statistic: 732-787-0215  Ext 132",
+        "Parks and Recreation: 732-787-0215 x212",
+        "Police: (732) 787-0600",
+        "Public Works: 732-787-0215 ext. 247",
+        "School District: 732-787-2007, webmaster@keansburg.k12.nj.us",
+        "Water/Sewer Department: 732-787-3903",
+    ],
+    "",
+    ""]);
 modelMap.set("Keyport", ["/models/cities/monmouth/keyport.glb"]);
 modelMap.set("Little Silver", ["/models/cities/monmouth/little silver.glb"]);
 modelMap.set("Loch Arbour", ["/models/cities/monmouth/loch arbour.glb"]);
-modelMap.set("Long Branch", ["/models/cities/monmouth/long branch.glb"]);
+modelMap.set("Long Branch", ["/models/cities/monmouth/long branch.glb", [
+    "Population: 32,383",
+    "Area: 10.11mi²",
+    "Long Branch was a favorite vacation spot of seven U.S. Presidents, including Ulysses S. Grant and Woodrow Wilson.",
+    "The town is home to Seven Presidents Oceanfront Park, named after the seven U.S. Presidents who visited the area.",
+],
+    ["Animal Control: 732-571-5665",
+        "Arts & Cultural Center: 732-222-7000, ext. 2050, artscenter@longbranch.org",
+        "Beach: 732-571-5697",
+        "Building & Development: Building Department - 732-571-5690 Zoning Department - 732-571-5647, jpalmer@longbranch.org",
+        "City Administration: 732-571-5645, cshirley@longbranch.org",
+        "Finance: 732-571-5688, mmartin@longbranch.org",
+        "Fire Bureau: 732-571-5651, mguarda@longbranch.org",
+        "Fire Department: 732-222-0076, mguarda@longbranch.org",
+        "Health: 732-571-5665, mkowal@longbranch.org",
+        "Municipal Court: 732-571-6500, lmeehan@longbranch.org",
+        "Office of Community and Economic Devlepoplent: 732-923-2040, jjones@longbranch.org",
+        "Office of Emergency Management: 732-571-6575, sdziuba@longbranch.org",
+        "Personnel: 732-571-5662, tokros@longbranch.org",
+        "Planning & Zoning: 732-571-5647, ebrachman@longbranch.org",
+        "Police: 732-222-1000, wbroughton@longbranch.org",
+        "Programs & Events: 732-222-7000, ext. 5447, dkawut@longbranch.org",
+        "Public Library: 732-222-3900, tgarcia.lbpl@gmail.com",
+        "Public Works: 732-571-6520, sdziuba@longbranch.org",
+        "Purchasing: 732-571-5656, dspaulding@longbranch.org",
+        "Recreation & Human Services: 732-571-6545, kparker@longbranch.org",
+        "Senior Affairs: 732-571-6542, pkrosnicki@longbranch.org",
+        "Tax Assessor: 732-571-5658, jbutow@longbranch.org",
+        "Arts & Cultural Center: 732-222-7000 ex: 2050, artscenter@longbranch.org",
+        "Beach: 732-571-5697",
+        "Tax Collector: 732-571-5657, taxcollector@longbranch.org",
+        "Veterans: 732-842-4751",
+    ],
+    "",
+    ""]);
 modelMap.set("Matawan", ["/models/cities/monmouth/matawan.glb"]);
 modelMap.set("Middletown Township", ["/models/cities/monmouth/middletown.glb"]);
 modelMap.set("Monmouth Beach", ["/models/cities/monmouth/monmouth beach.glb"]);
@@ -160,10 +250,38 @@ modelMap.set("Neptune City", ["/models/cities/monmouth/neptune.glb"]);
 modelMap.set("Neptune Township", ["/models/cities/monmouth/neptune twp.glb"]);
 modelMap.set("Oceanport", ["/models/cities/monmouth/ocean port.glb"]);
 modelMap.set("Rumson", ["/models/cities/monmouth/rumson.glb"]);
-modelMap.set("Sea Bright", ["/models/cities/monmouth/sea bright.glb"]);
+modelMap.set("Sea Bright", ["/models/cities/monmouth/sea bright.glb", [
+    "Population: 1451",
+    "Area: 1.29mi²",
+    "Sea Bright is one of the narrowest incorporated towns in the United States.    ",
+    "The town is known for its beautiful beaches and is a popular spot for surfing and fishing.    ",
+],
+    [
+        "Administration:  (732) 842-0099 Ext. 113 jverruni@seabrightnj.org",
+        "Assessor (732) 842-0099 Ext. 115 tanfuso@seabrightnj.org",
+        "Beach 732-351-4700 dklein@seabrightnj.org",
+        "Building Department (732) 842-0099, Ext. 110 ewheeler@seabrightnj.org",
+        "Finance 732-842-0099, Ext. 132 Kjacobs@seabrightnj.org",
+        "Fire Dept 732-842-0099, Ext. 132 ",
+        "Health Commission 732-493-9520",
+        "Library 732-383-8092 jfarmer@seabrightnj.org",
+        "Municipal Clerk 732-842-0099 ext. 118 cpfeiffer@seabrightnj.org",
+        "Municipal Court 732- 222-6517 ",
+        "Unified Planning Board 732-842-0099, Ext. 123 cmitchell@seabrightnj.org",
+        "Police Department 732-842-0010 bfriedman@seabrightnj.org",
+        "Public Works 732-842-0099, Ext. 142 dbahrle@seabrightnj.org",
+        "Recreation Department 732-842-0099, Ext. 127 dklein@seabrightnj.org",
+        "Sewer Utility Department (732) 842-0099 Ext. 111 pspahr@seabrightnj.org",
+        "Tax Department 732-842-0099 ext.111 pspahr@seabrightnj.org",
+    ],
+    "",
+    ""]);
 modelMap.set("Union Beach", ["/models/cities/monmouth/union beach.glb"]);
 modelMap.set("West Long Branch", ["/models/cities/monmouth/west long branch.glb"]);
 modelMap.set("Shrewsbury", ["/models/cities/monmouth/shrewsbury.glb"]);
+
+
+
 
 const selectedMaps: string[] = [
     "Carteret",
@@ -207,16 +325,25 @@ const selectedMaps: string[] = [
     "Shrewsbury"
 ];
 
+
+
+
 const extraRender: string[] = [
     "/models/rivers/Middlesex River.glb",
     "/models/rivers/Monmouth River.glb",
     "/models/nj.glb",
 ];
 
+
+
+
 export default function createMap(el: HTMLCanvasElement, location: HTMLSpanElement, hoveringOverLocation: HTMLSpanElement, funFacts: HTMLUListElement, contactInfo: HTMLUListElement, searchBar: HTMLInputElement) {
     const renderer = new WebGLRenderer({ antialias: true, canvas: el, alpha: true });
     const width = 800;
     const height = 600;
+
+
+
 
     const scene = new Scene();
     const camera = new PerspectiveCamera(75, width / height, 0.1, 1000);
@@ -225,11 +352,17 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
     camera.position.z = 0;
     camera.lookAt(0, 0, 0);
 
+
+
+
     const skyColor = 0xFFFFEE;
     const groundColor = 0x505070;
     const intensity = 3;
     const light = new HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
+
+
+
 
     const maps = new Map<string, any>();
     const loader = new GLTFLoader();
@@ -247,6 +380,9 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         });
     }
 
+
+
+
     for (const path of extraRender) {
         loader.load(path, function (gltf: any) {
             scene.add(gltf.scene);
@@ -258,6 +394,9 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         });
     }
 
+
+
+
     const animate = () => {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
@@ -267,23 +406,41 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         camera.updateProjectionMatrix();
     };
 
+
+
+
     const raycaster = new Raycaster();
     const mouseVector = new Vector2();
+
+
+
 
     resize();
     animate();
 
+
+
+
     let controls = new OrbitControls(camera, el);
     controls.update();
     controls.listenToKeyEvents(document);
+
+
+
 
     window.addEventListener('mousemove', e => {
         [mouseVector.x, mouseVector.y] =
             [2 * ((e.clientX - (renderer.getContext().canvas as HTMLCanvasElement).getBoundingClientRect().x) / width) - 1,
             1 - 2 * ((e.clientY - (renderer.getContext().canvas as HTMLCanvasElement).getBoundingClientRect().y) / height)];
 
+
+
+
         raycaster.setFromCamera(mouseVector, camera);
         if (Math.abs(mouseVector.x) > 1 || Math.abs(mouseVector.y) > 1) return;
+
+
+
 
         let selectedObject: string | undefined;
         for (const [name, obj] of maps.entries()) {
@@ -313,6 +470,9 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
             }
         }
 
+
+
+
         if (!selectedObject) {
             hoveringOverLocation.innerText = "___";
             return;
@@ -320,11 +480,17 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         hoveringOverLocation.innerText = selectedObject;
     });
 
+
+
+
     let hasClicked = false;
     window.addEventListener("mouseup", e => {
         if (e.button != 0) return;
         if (hasClicked) return;
         raycaster.setFromCamera(mouseVector, camera);
+
+
+
 
         let selectedObject: string | undefined;
         for (const [name, obj] of maps.entries()) {
@@ -350,8 +516,14 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         }
         if (!selectedObject) return;
 
+
+
+
         tpToObj(selectedObject);
     });
+
+
+
 
     function tpToObj(selectedObject: string) {
         const averagePosition = maps.get(selectedObject).scene.children[0].position;
@@ -382,23 +554,34 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
             }
             location.innerText = selectedObject;
 
+
+
+
             funFacts.innerText = "";
             const funFax = modelMap.get(selectedObject)![1];
             for (let i = 0; i < funFax.length; i++) {
                 const li = document.createElement("li");
                 li.innerText = funFax[i];
+                li.style.marginTop = "1vh";
                 funFacts.appendChild(li);
             }
+
+
+
 
             contactInfo.innerText = "";
             const contactInfos = modelMap.get(selectedObject)![2];
             for (let i = 0; i < contactInfos.length; i++) {
                 const li = document.createElement("li");
                 li.innerText = contactInfos[i];
+                li.style.marginTop = "1vh";
                 contactInfo.appendChild(li);
             }
         }, 10);
     }
+
+
+
 
     searchBar.addEventListener('keydown', e => {
         const input = searchBar.value.toLowerCase();
@@ -411,6 +594,9 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
             .filter(e => e[1] > 0)
             .map(e => e[0]);
 
+
+
+
         switch (e.key) {
             case "Enter":
                 if (!sortedMaps[0]) return;
@@ -421,14 +607,23 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
     });
 }
 
+
+
+
 function stringDistance(str1: string, str2: string): number {
     let longestSubstring = "";
+
+
+
 
     for (let i = 0; i < str1.length; i++) {
         for (let j = 0; j < str2.length; j++) {
             let substring = "";
             let x = i;
             let y = j;
+
+
+
 
             while (x < str1.length &&
                 y < str2.length &&
@@ -438,11 +633,26 @@ function stringDistance(str1: string, str2: string): number {
                 y++;
             }
 
+
+
+
             if (substring.length > longestSubstring.length) {
                 longestSubstring = substring;
             }
         }
     }
 
+
+
+
     return longestSubstring.length;
 }
+
+
+
+
+
+
+
+
+

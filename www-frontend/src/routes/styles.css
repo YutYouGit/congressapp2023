@@ -20,6 +20,10 @@
     transition: all 300ms;
 }
 
+select {
+    font-family: "Ubuntu";
+}
+
 body {
     padding: 0;
     margin: 0;
