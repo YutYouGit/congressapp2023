@@ -16,19 +16,24 @@
 
 <input bind:this={searchBar} type="text" placeholder="Go to Municipality" />
 
-<p class="location">Selected: <span id="location" bind:this={location} /></p>
-<p class="location">
-  Hovering Over: <span id="location" bind:this={hoveringLocation} />
-</p>
-
 <div class="box-left">
+  <p class="location">
+    [Current Location] <span id="location" bind:this={location}>___</span>
+    <br />
+    [Hovering Over] <span id="location" bind:this={hoveringLocation}>___</span>
+  </p>
+  <br />
   <b>Fun Facts</b>
-  <ul class="fun-facts" bind:this={funFacts} />
+  <ul class="fun-facts" bind:this={funFacts}>
+    <li>Fun facts will appear here.</li>
+  </ul>
 </div>
 
 <div class="box-right">
   <b>Contact Info</b>
-  <ul class="contact-info" bind:this={contactInfo} />
+  <ul class="contact-info" bind:this={contactInfo}>
+    <li>Contact infos will appear here.</li>
+  </ul>
 </div>
 
 <canvas bind:this={el}>
@@ -41,6 +46,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: var(--tertiary-0);
   }
 
   div {
@@ -48,7 +54,11 @@
   }
 
   .location {
-    font-size: clamp(1rem, 2.5vw, 4rem);
+    font-size: 150%;
+  }
+
+  #location {
+    color: var(--tertiary-1);
   }
 
   .box-left {
@@ -87,7 +97,7 @@
     text-indent: 0;
     padding: 0;
     margin: 0;
-    list-style: ">";
+    list-style: "> ";
   }
 
   input {

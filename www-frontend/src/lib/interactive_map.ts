@@ -214,7 +214,7 @@ const extraRender: string[] = [
 ];
 
 export default function createMap(el: HTMLCanvasElement, location: HTMLSpanElement, hoveringOverLocation: HTMLSpanElement, funFacts: HTMLUListElement, contactInfo: HTMLUListElement, searchBar: HTMLInputElement) {
-    const renderer = new WebGLRenderer({ antialias: true, canvas: el });
+    const renderer = new WebGLRenderer({ antialias: true, canvas: el, alpha: true });
     const width = 800;
     const height = 600;
 
@@ -314,7 +314,7 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
         }
 
         if (!selectedObject) {
-            hoveringOverLocation.innerText = "";
+            hoveringOverLocation.innerText = "___";
             return;
         }
         hoveringOverLocation.innerText = selectedObject;
@@ -376,7 +376,10 @@ export default function createMap(el: HTMLCanvasElement, location: HTMLSpanEleme
             camera.lookAt(target);
             hasClicked = false;
             controls.listenToKeyEvents(document);
-            if (!selectedObject) return;
+            if (!selectedObject) {
+                location.innerText = "___";
+                return;
+            }
             location.innerText = selectedObject;
 
             funFacts.innerText = "";
