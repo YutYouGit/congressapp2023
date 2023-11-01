@@ -29,5 +29,6 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"pnpm": "^8.10.2"
 	}
 }
