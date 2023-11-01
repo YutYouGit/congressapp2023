@@ -6,6 +6,11 @@
       </button>
     </a>
   </div>
+  <a href="/">
+    <button>
+      DistrictCompass
+    </button>
+  </a>
 </div>
 
 <style>
