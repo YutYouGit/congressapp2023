@@ -7,7 +7,7 @@
     </a>
   </div>
   <a href="/">
-    <button>
+    <button style="font-size: {"170%"}">
       DistrictCompass
     </button>
   </a>
