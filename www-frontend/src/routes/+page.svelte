@@ -1,3 +1,7 @@
+<head>
+  <title>DistrictCompass</title>
+</head>
+
 <script lang="ts">
   import Map from "$lib/map.svelte";
   import about from "$lib/aboutUs.svelte";
