@@ -1,6 +1,6 @@
 This is DistrictCompass!
 
-Preview here: [DistrictCompass.vercel.app](districtcompass.vercel.app) or [CongressApp.vercel](congressapp.vercel.app)
+Preview here: [DistrictCompass.vercel.app](districtcompass.vercel.app) or [CongressApp.vercel.app](congressapp.vercel.app)
 
 Instructions for Map:  
 Hold Right Click to Pan  
